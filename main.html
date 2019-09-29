@@ -3,6 +3,7 @@
   <title>게임세상</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link href="https://fonts.googleapis.com/css?family=Noto+Sans|Noto+Sans+KR&display=swap" rel="stylesheet">
+   <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
   <meta charset="utf-8">
 
 
@@ -13,13 +14,27 @@
 
   <div class="right" >
     <h2>태호 님</h2>
-    <p>안녕하세요</p>
+<p></p>
   </div>
 
   <div id="main" style="margin-left:20px;">
-  <a href="http://www.trex-game.skipser.com/" target="_blank" class='wide' style="background:#f6f5f6">
-    <img src="https://i.gifer.com/fz6c.gif" height="100%" width="100%">
-    <h2 style="color:black;">T-REX Runner</h2>
+    <a href="http://www.gamesfreak.net/games/Crossy-road.html" target="_blank" class='wide' style="background:#64D3F1;">
+        <img src="https://media0.giphy.com/media/l30WS25GU0f0SI8pBu/giphy.gif" height="100%" width="100%">
+
+        <h2>길건너 친구들</h2>
+      </a>
+      <a href="https://playcanv.as/p/2OlkUaxF/" target="_blank" class='wide' style="background:#018695;">
+          <img src="http://eskipaper.com/images/flappy-bird-3.jpg" height="100%" width="100%">
+
+          <h2>Flappy Bird</h2>
+        </a>
+        <a href="https://t-rex-game.com/" target="_blank" class='box' style="background:#fff">
+          <img src="https://ih0.redbubble.net/image.760598103.3456/flat,1000x1000,075,f.u1.jpg" height="100%" width="100%">
+          <h2 style="color:black;">T-REX Runner</h2>
+        </a>
+  <a href="https://poki.com/en/g/endless-lakeT" target="_blank" class='box' style="background:#1CDAE2">
+    <img src="http://lh3.googleusercontent.com/S0Vz04AtBXriN3Ejink5UYQFcaRuBEhI6nz4RC3jELY71z7Nfl0_VlRPnsD-_wzihyM=w300" height="100%" width="100%">
+    <h2>Endless Lake</h2>
   </a>
   <a href="https://api.razzlepuzzles.com/2048?locale=ko"  target="_blank" class='box' style="background:#EDC43F">
       <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/18/2048_logo.svg/1200px-2048_logo.svg.png" height="100%" width="100%">
@@ -45,22 +60,38 @@
 
     <h2>BreakLock</h2>
   </a>
-  <a href="javascript://" class='box yellow'>
-    <i class="icon-map-marker"></i>
-    <h2>준비중..</h2>
-  </a>
+
 </div>
 
 
 </div>
+<a href="javascript:startFS();" class="float">
+<img height="40px">
+<i class="fa fa-expand fa-2x"></i>
+</a>
 </body>
 </html>
+
 <style>
-@import url(https://netdna.bootstrapcdn.com/font-awesome/2.0/css/font-awesome.css);
 @import url(https://fonts.googleapis.com/css?family=Open+Sans:400,300);
 
 * { -webkit-font-smoothing:antialiased; -moz-font-smoothing:antialiased; -ms-font-smoothing:antialiased; -o-font-smoothing:antialiased; font-smoothing:antialiased; }
+.float{
+	position:fixed;
+	width:60px;
+	height:60px;
+	bottom:40px;
+	right:40px;
+	background-color:#0C9;
+	color:#FFF;
+	border-radius:50px;
+	text-align:center;
+	box-shadow: 2px 2px 3px #999;
+}
 
+.my-float{
+	margin-top:22px;
+}
 body{
   margin:0px;
   padding:0px;
@@ -226,3 +257,48 @@ img.prof{
 	bottom: 0px;
 }
 </style>
+<script>
+if (!document.fullscreenElement &&    // alternative standard method
+    !document.mozFullScreenElement && !document.webkitFullscreenElement) {  // current working methods
+  if (document.documentElement.requestFullscreen) {
+    document.documentElement.requestFullscreen();
+  } else if (document.documentElement.mozRequestFullScreen) {
+    document.documentElement.mozRequestFullScreen();
+  } else if (document.documentElement.webkitRequestFullscreen) {
+    document.documentElement.webkitRequestFullscreen(Element.ALLOW_KEYBOARD_INPUT);
+  }
+} else {
+  if (document.cancelFullScreen) {
+    document.cancelFullScreen();
+  } else if (document.mozCancelFullScreen) {
+    document.mozCancelFullScreen();
+  } else if (document.webkitCancelFullScreen) {
+    document.webkitCancelFullScreen();
+  }
+}
+
+function startFS(element) {
+
+  if (!document.fullscreenElement &&    // alternative standard method
+      !document.mozFullScreenElement && !document.webkitFullscreenElement) {  // current working methods
+    if (document.documentElement.requestFullscreen) {
+      document.documentElement.requestFullscreen();
+    } else if (document.documentElement.mozRequestFullScreen) {
+      document.documentElement.mozRequestFullScreen();
+    } else if (document.documentElement.webkitRequestFullscreen) {
+      document.documentElement.webkitRequestFullscreen(Element.ALLOW_KEYBOARD_INPUT);
+    }
+  } else {
+    if (document.cancelFullScreen) {
+      document.cancelFullScreen();
+    } else if (document.mozCancelFullScreen) {
+      document.mozCancelFullScreen();
+    } else if (document.webkitCancelFullScreen) {
+      document.webkitCancelFullScreen();
+    }
+  }
+
+	}
+
+
+</script>
