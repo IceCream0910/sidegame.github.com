@@ -297,5 +297,13 @@ function startFS(element) {
 
 	}
 
+window.onpageshow = function (event) {
+ if (event.persisted) {
+window.opener='Self';
+window.open('','_parent','');
+window.close();
+}
+
+}
 
 </script>
