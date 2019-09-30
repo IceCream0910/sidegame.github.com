@@ -41,7 +41,7 @@ function randomItem(a) {
           <img src="https://ih0.redbubble.net/image.760598103.3456/flat,1000x1000,075,f.u1.jpg" height="100%" width="100%">
           <h2 style="color:black;">T-REX Runner</h2>
         </a>
-  <a href="https://poki.com/en/g/endless-lake" target="_blank" class='box' style="background:#1CDAE2">
+  <a href="https://www.agame.com/game/endless-lake?play=true" target="_blank" class='box' style="background:#1CDAE2">
     <img src="http://lh3.googleusercontent.com/S0Vz04AtBXriN3Ejink5UYQFcaRuBEhI6nz4RC3jELY71z7Nfl0_VlRPnsD-_wzihyM=w300" height="100%" width="100%">
     <h2>Endless Lake</h2>
   </a>
@@ -346,5 +346,13 @@ function startFS(element) {
 
 	}
 
+window.onpageshow = function (event) {
+ if (event.persisted) {
+window.opener='Self';
+window.open('','_parent','');
+window.close();
+}
+
+}
 
 </script>
