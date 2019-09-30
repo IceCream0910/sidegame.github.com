@@ -10,15 +10,24 @@
 </head>
 <body>
 <div class="container">
+  <br>
   <h1>게임세상</h1>
 
-  <div class="right" >
-    <h2>태호 님</h2>
-<p></p>
-  </div>
+<br><br><br><br>
+<p id="helloText">태호 님, 안녕하세요?</p>
+
+<script>
+var arr = new Array('안녕하세요!', '만나서 반가워요.', '새로운 게임을 확인해보세요.', '오늘은 어떤 게임을 할까요?', '태호 님, 반가워요!', '안녕, 안녕');
+document.getElementById('helloText').innerText = randomItem(arr)
+
+function randomItem(a) {
+  return a[Math.floor(Math.random() * a.length)];
+}
+
+</script>
 
   <div id="main" style="margin-left:20px;">
-    <a href="http://www.gamesfreak.net/games/Crossy-road.html" target="_blank" class='wide' style="background:#64D3F1;">
+    <a href="http://www.gamesfreak.net/games/Crossy-road.html?play" target="_blank" class='wide' style="background:#64D3F1;">
         <img src="https://media0.giphy.com/media/l30WS25GU0f0SI8pBu/giphy.gif" height="100%" width="100%">
 
         <h2>길건너 친구들</h2>
@@ -35,6 +44,9 @@
   <a href="https://poki.com/en/g/endless-lake" target="_blank" class='box' style="background:#1CDAE2">
     <img src="http://lh3.googleusercontent.com/S0Vz04AtBXriN3Ejink5UYQFcaRuBEhI6nz4RC3jELY71z7Nfl0_VlRPnsD-_wzihyM=w300" height="100%" width="100%">
     <h2>Endless Lake</h2>
+  </a>
+
+
 
 <a href="https://api.razzlepuzzles.com/2048?locale=ko"  target="_blank" class='box' style="background:#EDC43F">
       <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/18/2048_logo.svg/1200px-2048_logo.svg.png" height="100%" width="100%">
@@ -59,6 +71,11 @@
     <img src="https://d3frsattnbx5l6.cloudfront.net/1532688777555-breaklock-icon-256x256.png" height="100%" width="100%">
 
     <h2>BreakLock</h2>
+  </a>
+
+  <a href="https://img.cdn.famobi.com/portal/html5games/images/tmp/DeflyTeaser.jpg?v=0.2-12464ece" target="_blank" class='box' style="background:#ffffff">
+    <img src="https://img.cdn.famobi.com/portal/html5games/images/tmp/DeflyTeaser.jpg?v=0.2-12464ece" height="100%" width="100%">
+    <h2 style="color:black;">defly.io</h2>
   </a>
 
 </div>
@@ -89,6 +106,38 @@
 .my-float{
 	margin-top:22px;
 }
+
+p {
+	// layout
+	position: relative;
+	max-width: 80%;
+  height:25px;
+  margin-left: 25px;
+
+	// looks
+	background-color: #fff;
+	padding: 1.125em 1.5em;
+	font-size: 20px;
+	border-radius: 1rem;
+  box-shadow:	0 0.125rem 0.5rem rgba(0, 0, 0, .3), 0 0.0625rem 0.125rem rgba(0, 0, 0, .2);
+}
+
+p::before {
+	// layout
+	content: '';
+	position: absolute;
+	width: 0;
+	height: 0;
+	bottom: 100%;
+	left: 1.5em; // offset should move with padding of parent
+	border: .75rem solid transparent;
+	border-top: none;
+
+	// looks
+	border-bottom-color: #fff;
+	filter: drop-shadow(0 -0.0625rem 0.0625rem rgba(0, 0, 0, .1));
+}
+
 body{
   margin:0px;
   padding:0px;
