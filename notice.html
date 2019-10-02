@@ -1,0 +1,310 @@
+<!Doctype html>
+<head>
+  <title>WePle - 게임의 새로운 차원</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://fonts.googleapis.com/css?family=Noto+Sans|Noto+Sans+KR&display=swap" rel="stylesheet">
+   <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <meta charset="utf-8">
+
+</head>
+<body>
+<a href="main.html"><img style="margin-top:30px; left:0; margin-right:75%;" src="assests/weple_logo.jpg" width="120px"></a>
+<h1 style="margin-bottom:100px;"></h1>
+
+
+
+
+<div id="detail" style="display:none; text-align:center; color:black;">
+  <h1 style="color:black; font-size:20px; text-align:center; margin-right:40%;">위플을 소개합니다</h1>
+  <br>
+  <h1 style="color:black; font-size:15px; text-align:center; margin-right:40%;  letter-spacing:0.1rem">지금까지 게임은 설치라는 개념과<br>함께 존재해왔습니다.<br>하지만 위플은 상식을 깼습니다.<br>설치 없이 브라우저로 휴대폰 사양에 <br>상관없이 게임을 플레이할 수 있습니다.<br>지금 경험해보세요!</h1>
+
+  <a href="javascript:exitmore();"><button class="button-box" onclick="javascript:exitmore();" style="font-size:30px;"><h1 class="green">닫기</h1></button></a>
+
+</div>
+
+
+
+
+  <div id="container" style="height:35%;">
+
+  <div id="success-box">
+    <a href="main.html"><div class="dot"></div>
+    <div class="dot two"></div></a>
+    <div class="face">
+      <div class="eye"></div>
+      <div class="eye right"></div>
+      <div class="mouth happy"></div>
+    </div>
+    <div class="shadow scale"></div>
+    <div class="message"><h1 class="alert">위플을 소개합니다!</h1><p>설치없이 즐기는 새로운 차원의 게임</p></div>
+    <a href="javascript:readmore();"><button class="button-box" onclick="javascript:readore();" style="font-size:10px;"><h1 class="green">자세히 보기</h1></button></a>
+  </div>
+  <!--
+  <div id="error-box">
+    <div class="dot"></div>
+    <div class="dot two"></div>
+    <div class="face2">
+      <div class="eye"></div>
+      <div class="eye right"></div>
+      <div class="mouth sad"></div>
+    </div>
+    <div class="shadow move"></div>
+    <div class="message"><h1 class="alert">Error!</h1><p>oh no, something went wrong.</div>
+    <button class="button-box"><h1 class="red">try again</h1></button>
+  </div>
+-->
+</div>
+<script>
+function readmore() {
+document.getElementById("success-box").style.display = "none";
+document.getElementById("detail").style.display = "block";
+}
+
+function exitmore() {
+document.getElementById("success-box").style.display = "block";
+document.getElementById("detail").style.display = "none";
+}
+</script>
+
+
+</body>
+<style>@import url('https://fonts.googleapis.com/css?family=Noto+Sans|Noto+Sans+KR&display=swap');
+html {
+  display: grid;
+  min-height: 100%;
+}
+body {
+  display: grid
+  overflow: hidden;
+  font-family: 'Noto Sans KR', 'Noto Sans';
+  text-transform: uppercase;
+  text-align: center;
+}
+#container {
+  position: relative;
+  margin: auto;
+  overflow: hidden;
+  width: 700px;
+  height: 250px;
+}
+h1 {
+  font-size: 0.9em;
+  font-weight: 100;
+  letter-spacing: 3px;
+  padding-top: 5px;
+  color: #FCFCFC;
+  padding-bottom: 5px;
+  text-transform: uppercase;
+}
+.green {
+  color: #4ec07d;
+}
+.red {
+  color: #e96075;
+}
+.alert {
+  font-weight: 700;
+  letter-spacing: 5px;
+}
+p {
+  margin-top: -5px;
+  font-size: 0.5em;
+  font-weight: 100;
+  color: #5e5e5e;
+  letter-spacing: 1px;
+}
+button, .dot {
+  cursor: pointer;
+}
+#success-box {
+  position: absolute;
+  width: 35%;
+  height: 100%;
+  left: 12%;
+  background: linear-gradient(to bottom right, #B0DB7D 40%, #99DBB4 100%);
+  border-radius: 20px;
+  box-shadow: 5px 5px 20px rgba(203, 205, 211, 0.1);
+  perspective: 40px;
+}
+#error-box {
+  position: absolute;
+  width: 35%;
+  height: 100%;
+  right: 12%;
+  background: linear-gradient(to bottom left, #EF8D9C 40%, #FFC39E 100%);
+  border-radius: 20px;
+  box-shadow: 5px 5px 20px rgba(203, 205, 211, 0.1);
+}
+.dot {
+  width: 8px;
+  height: 8px;
+  background: #FCFCFC;
+  border-radius: 50%;
+  position: absolute;
+  top: 4%;
+  right: 6%;
+}
+.dot:hover {
+  background: #c9c9c9;
+}
+.two {
+  right: 12%;
+  opacity: 0.5;
+}
+.face {
+  position: absolute;
+  width: 22%;
+  height: 22%;
+  background: #FCFCFC;
+  border-radius: 50%;
+  border: 1px solid #777777;
+  top: 21%;
+  left: 37.5%;
+  z-index: 2;
+  animation: bounce 1s ease-in infinite;
+}
+.face2 {
+  position: absolute;
+  width: 22%;
+  height: 22%;
+  background: #FCFCFC;
+  border-radius: 50%;
+  border: 1px solid #777777;
+  top: 21%;
+  left: 37.5%;
+  z-index: 2;
+  animation: roll 3s ease-in-out infinite;
+}
+.eye {
+  position: absolute;
+  width: 5px;
+  height: 5px;
+  background: #777777;
+  border-radius: 50%;
+  top: 40%;
+  left: 20%;
+}
+.right {
+  left: 68%;
+}
+.mouth {
+  position: absolute;
+  top: 43%;
+  left: 41%;
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+}
+.happy {
+  border: 2px solid;
+  border-color: transparent #777777 #777777 transparent;
+  transform: rotate(45deg);
+}
+.sad {
+  top: 49%;
+  border: 2px solid;
+  border-color: #777777 transparent transparent #777777;
+  transform: rotate(45deg);
+}
+.shadow {
+  position: absolute;
+  width: 21%;
+  height: 3%;
+  opacity: 0.5;
+  background: #777777;
+  left: 40%;
+  top: 43%;
+  border-radius: 50%;
+  z-index: 1;
+}
+.scale {
+  animation: scale 1s ease-in infinite;
+}
+.move {
+  animation: move 3s ease-in-out infinite;
+}
+.message {
+  position: absolute;
+  width: 100%;
+  text-align: center;
+  height: 40%;
+  top: 47%;
+}
+.button-box {
+  position: absolute;
+  background: #FCFCFC;
+  width: 50%;
+  height: 15%;
+  border-radius: 20px;
+  top: 73%;
+  left: 25%;
+  outline: 0;
+  border: none;
+  box-shadow: 2px 2px 10px rgba(119, 119, 119, 0.5);
+  transition: all 0.5s ease-in-out;
+}
+.button-box:hover {
+  background: #efefef;
+  transform: scale(1.05);
+  transition: all 0.3s ease-in-out;
+}
+@keyframes bounce {
+  50% {
+    transform: translateY(-10px);
+  }
+}
+@keyframes scale {
+  50% {
+    transform: scale(0.9);
+  }
+}
+@keyframes roll {
+  0% {
+    transform: rotate(0deg);
+    left: 25%;
+  }
+  50% {
+    left: 60%;
+    transform: rotate(168deg);
+  }
+  100% {
+    transform: rotate(0deg);
+    left: 25%;
+  }
+}
+@keyframes move {
+  0% {
+    left: 25%;
+  }
+  50% {
+    left: 60%;
+  }
+  100% {
+    left: 25%;
+  }
+}
+footer {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  text-align: center;
+  font-size: 1em;
+  text-transform: uppercase;
+  padding: 10px;
+  font-family: 'Lato', sans-serif;
+}
+footer p {
+  color: #EF8D9C;
+  letter-spacing: 2px;
+}
+footer a {
+  color: #B0DB7D;
+  text-decoration: none;
+}
+footer a:hover {
+  color: #FFC39E;
+}
+
+
+	</style>
