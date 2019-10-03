@@ -4,6 +4,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link href="https://fonts.googleapis.com/css?family=Noto+Sans|Noto+Sans+KR&display=swap" rel="stylesheet">
    <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+   <meta name="mobile-web-app-capable" content="yes">
+   <link rel="manifest" href="manifest.json">
   <meta charset="utf-8">
 
 
@@ -18,12 +20,42 @@
 
 <script>
 var arr = new Array('안녕하세요!', '만나서 반가워요.', '새로운 게임을 확인해보세요.', '오늘은 어떤 게임을 할까요?', '태호 님, 반가워요!');
-document.getElementById('helloText').innerText = randomItem(arr)
+document.getElementById('helloText').innerText = randomItem(arr);
 
 function randomItem(a) {
   return a[Math.floor(Math.random() * a.length)];
 }
 
+function mutebgm() {
+  var imgSource = document.getElementById('floatBtn').src;
+  if(imgSource='assests/mute_icon.png') {
+    document.getElementById("iframe").src = 'about;blank';
+    document.getElementById("floatBtn").src='assests/sound_icon.png';
+  }
+}
+
+</script>
+<script type="text/javascript">
+maxWindow();
+    window.onload = maxWindow();
+    window.onload = maxWindow;
+
+
+
+    function maxWindow() {
+        window.moveTo(0, 0);
+
+        if (document.all) {
+            top.window.resizeTo(screen.availWidth, screen.availHeight);
+        }
+
+        else if (document.layers || document.getElementById) {
+            if (top.window.outerHeight < screen.availHeight || top.window.outerWidth < screen.availWidth) {
+                top.window.outerHeight = screen.availHeight;
+                top.window.outerWidth = screen.availWidth;
+            }
+        }
+    }
 </script>
 
 
@@ -32,7 +64,7 @@ function randomItem(a) {
 
 
   <a href="http://www.gamesfreak.net/games/Crossy-road.html?play" target="_blank" class='wide' style="background:#64D3F1;">
-      <img src="https://media0.giphy.com/media/l30WS25GU0f0SI8pBu/giphy.gif" style="margin-left:30px;" height="100%">
+      <img src="https://lh3.googleusercontent.com/V31nfvzNcu_47lr8y2L7m3uw9azrpGyox88gpzhQxwfZSXliFJmIRVSlYJL1eOo_X2U" height="100%">
 
       <h2>길건너 친구들</h2>
     </a>
@@ -71,7 +103,7 @@ function randomItem(a) {
 
 
 <h1 style="font-size:30px;"></h1>
-<h1 style="font-size:30px; margin-bottom:20px;">혼자 또, 둘이 같이.</h1>
+<h1 style="font-size:30px; margin-bottom:20px;">혼자 또,<br>둘이 같이.</h1>
 <div id="container" style="margin-left:20px; margin-top:0px;">
 
 
@@ -140,7 +172,7 @@ function randomItem(a) {
 		</div>
 
 		<div class="circles circle-styles second center">
-      <a href="notice.html"><img src="assests/ring_icon.png" width="30px"></a>
+      <a href="javascript:mutebgm();"><img id="floatBtn" src="assests/mute_icon.png" width="40px"></a>
 
 		</div>
 		</div>
@@ -541,48 +573,19 @@ img.prof{
 	bottom: 0px;
 }
 </style>
+<iframe src="assests/music/mainBGM01.mp3?loop=1&autoplay=1" allow="autoplay" id="iframe" style="display:none"></iframe>
 <script>
-if (!document.fullscreenElement &&    // alternative standard method
-    !document.mozFullScreenElement && !document.webkitFullscreenElement) {  // current working methods
-  if (document.documentElement.requestFullscreen) {
-    document.documentElement.requestFullscreen();
-  } else if (document.documentElement.mozRequestFullScreen) {
-    document.documentElement.mozRequestFullScreen();
-  } else if (document.documentElement.webkitRequestFullscreen) {
-    document.documentElement.webkitRequestFullscreen(Element.ALLOW_KEYBOARD_INPUT);
-  }
-} else {
-  if (document.cancelFullScreen) {
-    document.cancelFullScreen();
-  } else if (document.mozCancelFullScreen) {
-    document.mozCancelFullScreen();
-  } else if (document.webkitCancelFullScreen) {
-    document.webkitCancelFullScreen();
-  }
+GoInFullscreen();
+function GoInFullscreen(element) {
+	if(element.requestFullscreen)
+		element.requestFullscreen();
+	else if(element.mozRequestFullScreen)
+		element.mozRequestFullScreen();
+	else if(element.webkitRequestFullscreen)
+		element.webkitRequestFullscreen();
+	else if(element.msRequestFullscreen)
+		element.msRequestFullscreen();
 }
-
-function startFS(element) {
-
-  if (!document.fullscreenElement &&    // alternative standard method
-      !document.mozFullScreenElement && !document.webkitFullscreenElement) {  // current working methods
-    if (document.documentElement.requestFullscreen) {
-      document.documentElement.requestFullscreen();
-    } else if (document.documentElement.mozRequestFullScreen) {
-      document.documentElement.mozRequestFullScreen();
-    } else if (document.documentElement.webkitRequestFullscreen) {
-      document.documentElement.webkitRequestFullscreen(Element.ALLOW_KEYBOARD_INPUT);
-    }
-  } else {
-    if (document.cancelFullScreen) {
-      document.cancelFullScreen();
-    } else if (document.mozCancelFullScreen) {
-      document.mozCancelFullScreen();
-    } else if (document.webkitCancelFullScreen) {
-      document.webkitCancelFullScreen();
-    }
-  }
-
-	}
 
 window.onpageshow = function (event) {
  if (event.persisted) {

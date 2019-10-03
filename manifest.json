@@ -1,0 +1,13 @@
+{
+  "short_name": "WePle",
+  "name": "WePle - 게임의 새로운 차원",
+  "icons": [
+    {
+      "src": "assests/weple_mobile_icon.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    }
+  ],
+  "start_url": "index.html",
+  "display": "standalone"
+}
