@@ -54,6 +54,125 @@ maxWindow();
         }
     }
 </script>
+<style>
+
+.toast__container {
+   margin-left:20px;
+
+    vertical-align: middle;
+    margin-left:20px;
+    margin-right:0px;
+
+}
+
+.toast__cell{
+  display:inline-block;
+}
+
+.add-margin{
+  margin-top:20px;
+}
+
+.toast__svg{
+  fill:#fff;
+}
+
+.toast {
+  text-align:left;
+    padding: 21px 0;
+    background-color:#fff;
+    border-radius:4px;
+    max-width: 90%;
+    top: 0px;
+    box-shadow: 1px 7px 14px -5px rgba(0,0,0,0.2);
+}
+
+
+.toast:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right:0;
+    width: 4px;
+    height: 100%;
+  border-top-left-radius:4px;
+  border-bottom-left-radius: 4px;
+
+}
+
+.toast__icon{
+  position:absolute;
+  top:50%;
+  left:22px;
+  transform:translateY(-50%);
+  width:14px;
+  height:14px;
+  padding: 7px;
+  border-radius:50%;
+  display:inline-block;
+}
+
+.toast__type {
+  color: #3e3e3e;
+  font-weight: 700;
+  margin-top: 0;
+  margin-bottom: 8px;
+}
+
+.toast__message {
+    font-size: 14px;
+    margin-top: 0;
+  margin-bottom: 0;
+    color: #878787;
+}
+
+.toast__content{
+  padding-left:70px;
+  padding-right:60px;
+}
+
+.toast__close {
+    position: absolute;
+    right: 22px;
+    top: 50%;
+    width: 14px;
+    cursor:pointer;
+    height: 14px;
+  fill:#878787;
+    transform: translateY(-50%);
+}
+
+.toast--green .toast__icon{
+  background-color:#2BDE3F;
+}
+
+.toast--green:before{
+  background-color:#2BDE3F;
+}
+
+.toast--blue .toast__icon{
+  background-color:#1D72F3;
+}
+
+.toast--blue:before{
+  background-color:#1D72F3;
+}
+
+.toast--yellow .toast__icon{
+  background-color:#FFC007;
+}
+
+.toast--yellow:before{
+  background-color:#FFC007;
+}
+
+.toast_wrap {
+  margin-left:50px;
+  right:0;
+}
+</style>
+
 
 <!-- Start of Async Drift Code -->
 <!--
@@ -84,20 +203,44 @@ drift.SNIPPET_VERSION = '0.3.1';
 drift.load('7h4nnuinu4d5');
 </script>
 End of Async Drift Code -->
-<h1 style="font-size:30px; margin-bottom:20px;">끝없는 모험.</h1>
-<div id="container" style="margin-left:20px; margin-top:0px;">
-  <a href="https://clash3d.com/airportclash3d" target="_blank" class='wide' style="background:#c4c52a;">
-      <img src="https://store-images.s-microsoft.com/image/apps.63557.14236348457220859.725a6c76-3945-4d46-a4ec-4fba502d8b6f.fd8aef34-65c9-4e3a-bbc2-6f02b84e9817?mode=scale&q=90&h=1080&w=1920" height="100%" width="100%">
+<script>
+jQuery(document).ready(function(){
+  jQuery('.toast__close').click(function(e){
+    e.preventDefault();
+    var parent = $(this).parent('.toast');
+    parent.fadeOut("slow", function() { $(this).remove(); } );
+  });
+});
+</script>
 
-      <h2>Airport Clash 3D</h2>
-    </a>
+<div id="toast_wrap" style="margin-left:20px;">
+<div class="toast toast--yellow add-margin" style="margin-left:20px;">
+  <div class="toast__icon">
+<svg version="1.1" class="toast__svg" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 32 32" style="enable-background:new 0 0 32 32;" xml:space="preserve">
+<g>
+	<g id="info">
+		<g>
+			<path  d="M10,16c1.105,0,2,0.895,2,2v8c0,1.105-0.895,2-2,2H8v4h16v-4h-1.992c-1.102,0-2-0.895-2-2L20,12H8     v4H10z"></path>
+			<circle  cx="16" cy="4" r="4"></circle>
+		</g>
+	</g>
+</g>
 
+    </svg>
+  </div>
+  <div class="toast__content">
+    <p class="toast__type">공지사항이 있어요!</p>
+    <p class="toast__message">오늘 일부 기기에서 '컬러 픽셀 아트'의 데이터가 초기화되는 오류가 발생했습니다. 불편을 드려 죄송합니다.</p>
+  </div>
+  <div class="toast__close">
+    <svg version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 15.642 15.642" xmlns:xlink="http://www.w3.org/1999/xlink" enable-background="new 0 0 15.642 15.642">
+  <path fill-rule="evenodd" d="M8.882,7.821l6.541-6.541c0.293-0.293,0.293-0.768,0-1.061  c-0.293-0.293-0.768-0.293-1.061,0L7.821,6.76L1.28,0.22c-0.293-0.293-0.768-0.293-1.061,0c-0.293,0.293-0.293,0.768,0,1.061  l6.541,6.541L0.22,14.362c-0.293,0.293-0.293,0.768,0,1.061c0.147,0.146,0.338,0.22,0.53,0.22s0.384-0.073,0.53-0.22l6.541-6.541  l6.541,6.541c0.147,0.146,0.338,0.22,0.53,0.22c0.192,0,0.384-0.073,0.53-0.22c0.293-0.293,0.293-0.768,0-1.061L8.882,7.821z"></path>
+</svg>
+  </div>
+</div>
 </div>
 
-
-<h1 style="font-size:30px;"></h1>
-
-<h1 style="font-size:30px; margin-bottom:20px;">계속 점프.</h1>
+<h1 style="font-size:30px; margin-bottom:20px;">끝이 없는 질주.</h1>
 <div id="container" style="margin-left:20px; margin-top:0px;">
 
 
@@ -115,6 +258,12 @@ End of Async Drift Code -->
         <img src="https://ih0.redbubble.net/image.760598103.3456/flat,1000x1000,075,f.u1.jpg" height="100%" width="100%">
         <h2 style="color:black;">T-REX Runner</h2>
       </a>
+
+      <a href="https://play.lol.disney.com/v1/files/f37e83c0-dbe4-11e6-b40b-06de3600005d/release3/index.html?refOverride=https%3A%2F%2Flol.disney.com%2Fgames%2Fracing-games&coreGameId=52c96b6324a6cab99388fa7d" target="_blank" class='box' style="background:#0f97e0">
+        <img src="https://cdn.andyroid.net/website/wp-content/uploads/2015/04/Cars-Fast-as-Lightning-icon.png" height="100%">
+        <h2>Cars:Fast Racing</h2>
+      </a>
+
 <a href="https://www.agame.com/game/endless-lake?play=true" target="_blank" class='box' style="background:#00F6EE">
   <img src="https://imgs2.dab3games.com/endless-lake-game.png" height="100%" width="100%">
   <h2>Endless Lake</h2>
@@ -147,35 +296,18 @@ End of Async Drift Code -->
 </div>
 
 
-
+<h1 style="font-size:30px;"></h1><h1 style="font-size:30px;"></h1>
 <h1 style="font-size:30px;"></h1>
-<h1 style="font-size:30px; margin-bottom:20px;">혼자 또,<br>둘이 같이.</h1>
-<div id="container" style="margin-left:20px; margin-top:0px;">
 
-
-  <a href="https://play.famobi.com/2cars" target="_blank" class='wide' style="background:#25337A">
-    <img src="https://lh3.googleusercontent.com/qPriY5KT3hcDucc_lCOUO4PRrpZ9L7_cJKsfjyTMwNM0-jGQi1JKFX8XB5yxUvTt5g" height="100%" width="100%">
-    <h2>2Cars</h2>
-  </a>
-
-  <a href="https://play.famobi.com/3d-air-hockey" target="_blank" class='box' style="background:#567f7e">
-    <img src="https://img.cdn.famobi.com/portal/html5games/images/tmp/3dAirHockeyTeaser.jpg" height="100%" width="100%">
-    <h2>3D Air Hockey</h2>
-  </a>
-  <h1 style="font-size:30px;"></h1>
-  <h1 style="font-size:30px;"></h1>
-</div>
-
-
-<h1 style="font-size:30px;"></h1>
 <h1 style="font-size:30px; margin-bottom:20px; ">도전의 연속,<br> 아케이드.</h1>
 <div id="container" style="margin-left:20px; margin-top:0px;">
 
+  <a href="https://html5.gamedistribution.com/b2968ed730164923a5f531b792278fe0/" target="_blank" class='wide'  style="background:#ffb607">
+    <img src="https://image.winudf.com/v2/image1/Y29tLmtha2Fyb2QuYmlnaHVudGVyX3NjcmVlbl9rby1LUl8wXzE1NjEwNjg4NTFfMDgx/screen-0.jpg?fakeurl=1&type=.jpg" height="100%" >
+    <h2 style="color:black;">Big Hunter</h2>
+  </a>
 
-  <a href="https://api.razzlepuzzles.com/2048?locale=ko"  target="_blank" class='wide' style="background:#EDC43F">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/18/2048_logo.svg/1200px-2048_logo.svg.png" height="100%">
-      <h2>2048</h2>
-    </a>
+
 
 
     <a href="http://play.famobi.com/hextris"  target="_blank" class='wide' style="background:#2d3e50">
@@ -183,6 +315,20 @@ End of Async Drift Code -->
         <h2>hextris.io</h2>
       </a>
 
+      <a href="https://html5.gamedistribution.com/7c1b2e56439f4ab9ac2849eff042216b/"  target="_blank" class='box' style="background:#d1c0ed">
+            <img src="https://files.skywardgames.com/pictures/music_line_3.jpg" height="100%">
+          <h2>Music Line 3</h2>
+        </a>
+
+        <a href="https://www.yiv.com/games/House-Paint/index.html"  target="_blank" class='box' style="background:#fffa5e">
+              <img src="https://images-na.ssl-images-amazon.com/images/I/51RQCl8zEeL._SY355_.png" height="100%">
+            <h2 style="color:black;">House Paint</h2>
+          </a>
+
+      <a href="https://api.razzlepuzzles.com/2048?locale=ko"  target="_blank" class='box' style="background:#EDC43F">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/18/2048_logo.svg/1200px-2048_logo.svg.png" height="100%">
+          <h2>2048</h2>
+        </a>
       <a href="https://play.famobi.com/html5game/1d87d326-b266-4148-b2c8-c720d5285632/A1000-1"  target="_blank" class='box' style="background:#fff">
             <img src="https://is3-ssl.mzstatic.com/image/thumb/Purple113/v4/ee/48/df/ee48dfc8-23a0-c3df-5da5-0c719bc98f45/source/512x512bb.jpg" height="100%">
           <h2 style="color:black;">Color Pixel Art</h2>
@@ -228,6 +374,47 @@ End of Async Drift Code -->
       <h2 style="color:black;">deeeep.io</h2>
 
 </a>
+
+
+
+
+</div>
+<h1 style="font-size:30px;"></h1>
+<h1 style="font-size:30px;"></h1>
+<h1 style="font-size:30px;"></h1>
+
+<h1 style="font-size:30px; margin-bottom:20px;">혼자 또,<br>둘이 같이.</h1>
+<div id="container" style="margin-left:20px; margin-top:0px;">
+
+
+  <a href="https://play.famobi.com/2cars" target="_blank" class='wide' style="background:#25337A">
+    <img src="https://lh3.googleusercontent.com/qPriY5KT3hcDucc_lCOUO4PRrpZ9L7_cJKsfjyTMwNM0-jGQi1JKFX8XB5yxUvTt5g" height="100%" width="100%">
+    <h2>2Cars</h2>
+  </a>
+
+  <a href="https://play.famobi.com/3d-air-hockey" target="_blank" class='box' style="background:#567f7e">
+    <img src="https://img.cdn.famobi.com/portal/html5games/images/tmp/3dAirHockeyTeaser.jpg" height="100%" width="100%">
+    <h2>3D Air Hockey</h2>
+  </a>
+  <h1 style="font-size:30px;"></h1>
+  <h1 style="font-size:30px;"></h1>
+</div>
+
+
+
+
+
+
+<h1 style="font-size:30px;"></h1>
+
+<h1 style="font-size:30px; margin-bottom:20px;">끝없는 전투.</h1>
+<div id="container" style="margin-left:20px; margin-top:0px;">
+  <a href="https://clash3d.com/airportclash3d" target="_blank" class='wide' style="background:#c4c52a;">
+      <img src="https://store-images.s-microsoft.com/image/apps.63557.14236348457220859.725a6c76-3945-4d46-a4ec-4fba502d8b6f.fd8aef34-65c9-4e3a-bbc2-6f02b84e9817?mode=scale&q=90&h=1080&w=1920" height="100%" width="100%">
+
+      <h2>Airport Clash 3D</h2>
+    </a>
+
 </div>
 <!--
 <div id="footer">
@@ -439,37 +626,6 @@ button.addEventListener("click", function() {
 
 .my-float{
 	margin-top:22px;
-}
-
-p {
-	// layout
-	position: relative;
-	max-width: 90%;
-  height:25px;
-  margin-left: 25px;
-
-	// looks
-	background-color: #fff;
-	padding: 1.125em 1.5em;
-	font-size: 20px;
-	border-radius: 1rem 1rem 0 1rem;
-  box-shadow:	0 0.125rem 0.5rem rgba(0, 0, 0, .3), 0 0.0625rem 0.125rem rgba(0, 0, 0, .2);
-}
-
-p::before {
-	// layout
-	content: '';
-	position: absolute;
-	width: 0;
-	height: 0;
-	bottom: 100%;
-	left: 1.5em; // offset should move with padding of parent
-	border: .75rem solid transparent;
-	border-top: none;
-
-	// looks
-	border-bottom-color: #fff;
-	filter: drop-shadow(0 -0.0625rem 0.0625rem rgba(0, 0, 0, .1));
 }
 
 body{
