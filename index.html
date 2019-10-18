@@ -204,13 +204,10 @@ drift.load('7h4nnuinu4d5');
 </script>
 End of Async Drift Code -->
 <script>
-jQuery(document).ready(function(){
-  jQuery('.toast__close').click(function(e){
-    e.preventDefault();
-    var parent = $(this).parent('.toast');
-    parent.fadeOut("slow", function() { $(this).remove(); } );
-  });
-});
+setTimeout(function() {
+document.getElementById("toast_part").style.display="none";
+}, 6000);
+
 
 setTimeout(function() {
 document.getElementById("toast_part").style.display="none";
